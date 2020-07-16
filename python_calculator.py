@@ -23,13 +23,13 @@ btn_clr = Button(window,
              width=4,
              bg="#434B69", fg="white",
              font=("Serif 24 bold"))
-btn_sign = Button(window,
-             text="+/-",
+btn_open = Button(window,
+             text="(",
              width=4,
              bg="#434B69", fg="white",
              font=("Serif 24 bold"))
-btn_mod = Button(window,
-             text="%",
+btn_close = Button(window,
+             text=")",
              width=4,
              bg="#434B69", fg="white",
              font=("Serif 24 bold"))
@@ -119,8 +119,8 @@ btn_equal = Button(window,
 
 display_screen.grid(row=0, columnspan=4, sticky="nsew")
 btn_clr.grid(row=1, column=0)
-btn_sign.grid(row=1, column=1)
-btn_mod.grid(row=1, column=2)
+btn_open.grid(row=1, column=1)
+btn_close.grid(row=1, column=2)
 btn_div.grid(row=1, column=3)
 btn_7.grid(row=2, column=0)
 btn_8.grid(row=2, column=1)
