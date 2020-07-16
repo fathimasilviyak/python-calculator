@@ -29,6 +29,7 @@ window=Tk()
 window.geometry("+500+150")
 window.title("Calculator")
 window.configure(background="black")
+window.resizable(0, 0)
 
 
 
