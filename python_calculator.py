@@ -14,8 +14,12 @@ def btn_clicked(value):
     else:
         label_text.set(old_value+str(value))
 
+
+
 def clear():
     label_text.set("")
+
+
 
 def calculation():
     try:
@@ -26,7 +30,7 @@ def calculation():
 # creating window for calculator
 
 window=Tk()
-window.geometry("+500+150")
+window.geometry("346x466+500+150")
 window.title("Calculator")
 window.configure(background="black")
 window.resizable(0, 0)
@@ -45,6 +49,8 @@ display_screen = Label(window,
                        bg="#1F2333",
                        borderwidth=20,
                        relief="sunken",
+                       wraplength=300,
+                       justify="right",
                        anchor=E)
 
 
