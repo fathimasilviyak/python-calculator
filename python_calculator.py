@@ -11,6 +11,11 @@ def btn_clicked(value):
     else:
         label_text.set(old_value+str(value))
 
+def clear():
+    label_text.set("")
+
+
+
 
 # creating window for calculator
 
@@ -42,7 +47,8 @@ btn_clr = Button(window,
              text="C",
              width=4,
              bg="#434B69", fg="white",
-             font=("Serif 24 bold"))
+             font=("Serif 24 bold"),
+             command= clear)
 btn_open = Button(window,
              text="(",
              width=4,
