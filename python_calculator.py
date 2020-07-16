@@ -1,6 +1,9 @@
+
 from tkinter import *
 
 from tkinter import Button
+
+
 
 # commands for buttons
 
@@ -14,8 +17,11 @@ def btn_clicked(value):
 def clear():
     label_text.set("")
 
-
-
+def calculation():
+    try:
+        label_text.set(eval(label_text.get()))
+    except:
+        label_text.set("Error")
 
 # creating window for calculator
 
@@ -155,7 +161,8 @@ btn_equal = Button(window,
              text="=",
              width=4,
              bg="#149DDD", fg="white",
-             font=("Serif 24 bold"))
+             font=("Serif 24 bold"),
+             command=calculation)
 
 
 
