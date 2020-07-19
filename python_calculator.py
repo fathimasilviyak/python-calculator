@@ -14,7 +14,23 @@ def btn_clicked(value):
     else:
         label_text.set(old_value+str(value))
 
+    if len(label_text.get()) >= 23:
+        display_screen.configure(font=("Serif 24"),
+                                 height=3,
+                                 width=10,
+                                 );
 
+        if len(label_text.get()) >= 49:
+            label_text.set("Error")
+            display_screen.configure(font=("Serif 36"),
+                                 height=2,
+                                 width=10,
+                                     );
+    else :
+         display_screen.configure(font=("Serif 36"),
+                                 height=2,
+                                 width=10,
+                                     );
 
 def clear():
     label_text.set("")
@@ -22,32 +38,35 @@ def clear():
 
 
 def calculation():
+
+
     try:
         label_text.set(eval(label_text.get()))
     except:
         label_text.set("Error")
 
-# creating window for calculator
+# ----------------------creating window for calculator--------------------------------
 
 window=Tk()
-window.geometry("346x466+500+150")
+window.geometry("346x465+500+150")
 window.title("Calculator")
 window.configure(background="black")
 window.resizable(0, 0)
 
 
 
-# creating diaplay screen
+# ------------------------creating diaplay screen-------------------------
 
 label_text = StringVar()
 
 display_screen = Label(window,
-                       font=("Serif", 40),
+                       font=("Serif 36"),
                        textvariable=label_text,
-                       pady=20,
+                       height=2,
+                       width=10,
                        fg="white",
                        bg="#1F2333",
-                       borderwidth=20,
+                       borderwidth=14,
                        relief="sunken",
                        wraplength=300,
                        justify="right",
